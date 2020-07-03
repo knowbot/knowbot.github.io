@@ -1,0 +1,61 @@
+#scroll-up-top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-family: 'Fira Code'; 
+    padding: 1em 2em;
+    height: 15%;
+    width: 100%;
+}
+
+
+#seal {
+    width: auto;
+    font-size: 2rem;
+    font-weight: bold;
+    align-content: center;
+}
+
+#magic-portals {
+    width: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+#seal a, .portal a:link, .portal a:visited {
+    text-decoration: none;
+    color: black;
+}
+  
+.portal a:hover {
+    color: hotpink;
+}
+
+.portal a:active {
+    color: hotpink;
+}
+
+.portal {
+    width: auto;
+    margin: 0 0.5em;
+    font-size: 1.8rem;
+    display: flex;
+    line-height: 2rem;
+}
+
+#lore a:before {
+    content: "";
+    width: 1.8rem;
+    height: 1.8rem;
+    padding: 0.05em;
+    float: left;
+    margin: 0 0.25em;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    background: url("../assets/parchment.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+}
