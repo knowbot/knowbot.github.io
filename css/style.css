@@ -1,35 +1,48 @@
-#scroll-up-top {
+.mimic {
+    padding: 0 10em;
+    display: flex;
+}
+.chest {
+    padding: 1em;
+}
+
+.map {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    font-family: 'Fira Code'; 
+    font-family: 'Fira Mono'; 
     padding: 1em 2em;
     height: 15%;
     width: 100%;
 }
 
 
-#seal {
+.seal {
     width: auto;
+    margin: auto 0;
     font-size: 2rem;
     font-weight: bold;
     align-content: center;
 }
 
-#magic-portals {
+.magic-portals {
     width: auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
 }
 
-#seal a, .portal a:link, .portal a:visited {
+.seal a, .portal a:link, .portal a:visited {
     text-decoration: none;
     color: black;
+    transition: 0.25s;
 }
   
 .portal a:hover {
     color: hotpink;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s;
 }
 
 .portal a:active {
@@ -39,23 +52,43 @@
 .portal {
     width: auto;
     margin: 0 0.5em;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     display: flex;
     line-height: 2rem;
 }
 
-#lore a:before {
-    content: "";
-    width: 1.8rem;
-    height: 1.8rem;
-    padding: 0.05em;
+.portal a.active::before, .portal a:hover::before {
+    opacity: 100;
+}
+
+
+.portal a::before {
+    opacity: 0;
+    display: flex;
+    width: 1.5rem;
+    height: 1.5rem;
     float: left;
-    margin: 0 0.25em;
-    display:flex;
-    flex-direction:row;
+    margin: auto 0.25em;
     align-items: center;
     justify-content: center;
-    background: url("../assets/parchment.svg") no-repeat;
-    background-size: contain;
-    background-position: center;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s;
 }
+
+#lore a::before {
+    content: url("../assets/026-scroll.svg");
+}
+
+#quests a::before {
+    content: url("../assets/022-swords.svg");
+}
+
+#stats a::before {
+    content: url("../assets/047-poison.svg");
+}
+
+#outposts a::before {
+    content: url("../assets/015-banner.svg");
+}
+
